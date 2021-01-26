@@ -25,6 +25,7 @@ const Signup = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // const [username, setUsername] = useState('')
 
   // handel sign-up
 
@@ -34,7 +35,7 @@ const Signup = () => {
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log(res)
-        context.setUser({ email: res.user.email, uid: res.user.uid })
+        context.setUser({ email: res.user.email, uid: res.user.uid})
       })
       .catch(error => {
         console.log(error)
@@ -75,6 +76,7 @@ const Signup = () => {
                     />
                   </Col>
                 </FormGroup>
+                
                 <FormGroup row>
                   <Label for='password' sm={3}>
                     Password
@@ -93,7 +95,7 @@ const Signup = () => {
               </CardBody>
               <CardFooter>
                 <Button type='submit' block color='primary'>
-                  Sign In
+                  Sign UP
               </Button>
               </CardFooter>
             </Form>
